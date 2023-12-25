@@ -9,12 +9,15 @@ void sort(mystack &s)
         if s.StackisEmpty()
         return;
         else
-                tmp = s.top();
-        s.pop();
-
+	{
+		tmp = s.top();
+        	s.pop();
+	}
         while (tmpstack.StackisFull() && tmpatck.stacktop()> tmp)
-                s.push(tmpstack.stacktop());
+	{
+		s.push(tmpstack.stacktop());
         tmpstack.pop();
+	}
 
 }
 
