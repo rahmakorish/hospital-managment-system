@@ -4,12 +4,15 @@
 template <class num>
 class mystack
 {
-num top, MAX, stack_arr[1000];
+public:
+num top, MAX, stack_arr[10];
 
 public:
 mystack(){
 top = -1;
-MAX = 1024;
+MAX = 10;
+for(int x = 0; x < 10; x++)
+	stack_arr[x] = 0;
 }
 mystack(mystack &S)
 {
