@@ -1,24 +1,26 @@
 #include <iostream>
 #include "mystack.h"
 using namespace std;
-void sort(mystack &s)
+
+void sort(mystack<int> &s)
 {
-        mystack tmpstack;
-        int tmp;
+	mystack<int> tmps;
+	int temp,top =s.stacktop();
 
-        if s.StackisEmpty()
-        return;
-        else
-	{
-		tmp = s.top();
-        	s.pop();
+	if(s.StackisEmpty())
+		return;
+	else{
+		for(int i = 0; i <= (top -1); i++)
+		{
+			for(int j=0; j <=top;j++){
+			if(s.stack_arr[i] > s.stack_arr[j]){
+				temp = s.stack_arr[i];
+				s.stack_arr[i] = s.stack_arr[j];
+				s.stack_arr[j] = temp;
+			}
+			}
+		}
 	}
-        while (tmpstack.StackisFull() && tmpatck.stacktop()> tmp)
-	{
-		s.push(tmpstack.stacktop());
-        tmpstack.pop();
-	}
-
 }
 
 int main()
@@ -28,13 +30,13 @@ int main()
     stacky.push(5);
     stacky.push(8);
     cout<<"stack top:"<<stacky.stacktop()<<'\n';
-    for (int i = 0; i<(stacky.MAX); i++)
+   for (int i = 0; i<(stacky.stacksize()); i++)
 	cout<<"stack before sorting "<<stacky.stack_arr[i]<<'\n';
 
-    sort(stacky);
+   sort(stacky);
 
-    for (int i = 0; i<(stacky.MAX); i++)
-        cout<<"stack before sorting "<<stacky.stack_arr[i]<<'\n';
+    for (int i = 0; i<(stacky.stacksize()); i++)
+        cout<<"stack after sorting "<<stacky.stack_arr[i]<<'\n';
 
 
     return 0;
