@@ -6,7 +6,9 @@ int main()
 {
     mystack<int> stacky;
     stacky.push(9);
-    cout<< stacky.stacktop();
+    stacky.push(5);
+    stacky.push(8);
+    cout<<"stack top:"<<stacky.stacktop()<<'\n';
 
     return 0;
 }
