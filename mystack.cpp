@@ -2,6 +2,7 @@
 #include "mystack.h"
 using namespace std;
 template <class num>
+
 //constructor
 mystack<num>::mystack()
 {
@@ -9,9 +10,17 @@ top = -1;
 MAX = 1000;
 }
 //copy constructor
+mystack(myatack &S)
+{
+top = -1;
+MAX = S.MAX;
+for (int i = 0; i < top; i++)
+stack_arr[i] = S.stack_arr[i];
+}
 
 //StackisFull-checks if stack is full
-mystack<num>::StackisFull()
+
+bool mystack<num>::StackisFull()
 {
       if (top == MAX-1){
           return true;
@@ -51,7 +60,7 @@ num mystack<num>::stacktop()
         return(stack_arr[top]);
     }
 //stack size function
-num mystack<num>::stacksize()
+int mystack<num>::stacksize()
     {
         return(top+1);
     }
