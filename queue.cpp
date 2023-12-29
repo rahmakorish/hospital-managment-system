@@ -107,32 +107,8 @@ class queue
 		}
 		
 };
-int main()
-{
-	queue clinicQ;
-	for(int i = 0; i< 4;i++)
-	{
-		int item;
-		cout<<"Enter patient to queue \n";
-		cin>>item;
-		clinicQ.enquque(item);
-	}
-	cout<<"final\n";
-	clinicQ.display();
-	clinicQ.dequeue();
-	clinicQ.display();
-	int firstpt = clinicQ.getfirst();
-	cout <<"first patient in line:"<<firstpt<<endl;
-	int lastpt= clinicQ.getlast();
-	cout<<"last patient: "<<lastpt<<endl;
-	int size = clinicQ.linesize();
-	cout<<"number of people in line: "<<size<<endl;
-	if(clinicQ.search(3) == true)
-	{
-	cout<<"found patient in line!\n";
-	}
-	return 0;
-}
+
+
 
 
 
