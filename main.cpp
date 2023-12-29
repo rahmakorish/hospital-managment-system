@@ -9,6 +9,8 @@ using namespace std;
  */
 int main()
 {
+	//string clinics[5] = ["Ophthalmology", "dentistry","General surgery", "Orthopedic surgery","ENT"];
+	//queue clinicQ;
 	int input;
 	cout<<"\nCONTACT MANAGEMENT SYSTEM";
     cout<<"\n\nMAIN MENU";
